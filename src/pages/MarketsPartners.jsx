@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MARKETS } from '../content/site.js';
 import { CtaButton, Hero, Img, SectionHead } from '../components/ui.jsx';
 
@@ -17,6 +18,30 @@ function Venn() {
   );
 }
 
+function PersonCard({ p }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <li className={`person ${open ? 'is-open' : ''}`}>
+      <button type="button" className="person__btn" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+        <Img slot={p.photo} className="person__photo" />
+        <span className="person__name">{p.name}</span>
+        <span className="person__role">{p.role}</span>
+        <span className="person__hint">Read full bio</span>
+      </button>
+      <div className="person__pop">
+        <h3>{p.name}</h3>
+        <p className="person__role">{p.role}</p>
+        {p.bio.map((para) => (
+          <p key={para.slice(0, 24)}>{para}</p>
+        ))}
+        <a className="person__link" href={p.linkedin} target="_blank" rel="noreferrer">
+          LinkedIn profile
+        </a>
+      </div>
+    </li>
+  );
+}
+
 export default function MarketsPartners() {
   const { team, how, footprint, twoWay, model, next } = MARKETS;
   return (
@@ -28,12 +53,7 @@ export default function MarketsPartners() {
           <SectionHead eyebrow={team.eyebrow} title={team.title} />
           <ul className="team">
             {team.people.map((p) => (
-              <li key={p.name} className="person">
-                <Img slot={p.photo} className="person__photo" />
-                <h3>{p.name}</h3>
-                <p className="person__role">{p.role}</p>
-                {p.bio && <p className="person__bio">{p.bio}</p>}
-              </li>
+              <PersonCard key={p.name} p={p} />
             ))}
           </ul>
         </div>
@@ -78,8 +98,11 @@ export default function MarketsPartners() {
                 <section key={g.name} className="places" aria-label={g.name}>
                   <h3>{g.name}</h3>
                   <ul>
-                    {g.places.map((p) => (
-                      <li key={p} className={g.accent ? 'is-accent' : ''}>{p}</li>
+                    {g.places.map(([country, city]) => (
+                      <li key={country} className={g.accent ? 'is-accent' : ''}>
+                        {country}
+                        <span className="places__city">{city}</span>
+                      </li>
                     ))}
                   </ul>
                 </section>

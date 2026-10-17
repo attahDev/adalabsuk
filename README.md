@@ -7,7 +7,7 @@ Three pages: Who We Are (`/`), Impact (`/impact`), Markets & Partners (`/markets
     npm run build    # production build in /dist
 
 ## Where to edit
-- `src/content/site.js`: all copy, nav, links, contact email. Lines marked `CONFIRM` are drafted wording to verify with Adanian before launch.
+- `src/content/site.js`: all copy, nav, links and the contact email.
 - `src/content/images.js` and `public/images/`: image slots. All images are placeholders exported from the Figma mockup. Replace the file (keep the name) or change the path.
 - `src/styles/global.css`: colour and type tokens at the top (`:root`).
 - `public/logo.png`: 150px placeholder taken from the mockup. Swap for the SVG logo.

@@ -1,9 +1,6 @@
-// All site copy and links live here so the team can edit text without touching components.
-// Items marked CONFIRM are drafted wording that Adanian should verify before launch.
 
 export const SITE = {
   name: 'Adanian Labs UK',
-  // CONFIRM: replace with the real enquiries address.
   contactEmail: 'hello@adanianlabs.co.uk',
   tagline: 'Market Access. Partnerships. Expansion. Impact.',
   baseLine: 'Adanian Labs UK · Gateway between the UK and Africa',
@@ -15,7 +12,6 @@ export const NAV = [
   { label: 'Markets & Partners', to: '/markets' },
 ];
 
-// CONFIRM: real URLs for the Africa-side links.
 export const AFRICA_LINKS = [
   { label: 'Adanian Labs Africa', href: '#' },
   { label: 'Technology Tools', href: '#' },
@@ -30,12 +26,10 @@ export const CTA = {
   partner: { label: 'Partner with us', subject: 'Partnership enquiry' },
 };
 
-// ---------- Who We Are ----------
 export const WHO = {
   hero: {
     eyebrow: 'UK · Africa · Trade Gateway',
     title: 'Connecting UK and African Markets. From Market Entry to Lasting Partnerships.',
-    // CONFIRM: "industrial trade" added at the request of leadership.
     sub: 'We facilitate cross-continent expansion, industrial trade, strategic partnerships and joint ventures for ambitious businesses scaling between Africa and the UK.',
     tag: 'UK · Africa',
     note: 'Your gateway into African markets, and from Africa into the UK.',
@@ -68,7 +62,6 @@ export const WHO = {
       { title: 'Joint Venture Structuring', body: 'Setting up cross-border ventures that work for both partners.' },
       { title: 'Regulatory Navigation', body: 'Guidance through legal and regulatory requirements in each market.' },
       { title: 'Market Intelligence', body: 'Research and insight to make confident expansion decisions.' },
-      // CONFIRM: wording drafted, not in the original mockup.
       { title: 'Trade Delegations', body: 'Organised visits that put UK and African businesses in the same room as the right partners.' },
     ],
     support: "Adanian's technology and data teams support every engagement.",
@@ -77,7 +70,6 @@ export const WHO = {
     eyebrow: 'Our foundation in Africa',
     title: 'Built in Africa. Proven across borders.',
     intro: 'Our Africa platform brings on-the-ground reach, local partners and delivery capacity to every UK-Africa partnership.',
-    // CONFIRM: figures come from the original mockup ("Adanian Labs Africa platform figures").
     stats: [
       { value: '40+', label: 'startups incubated' },
       { value: '100+', label: 'technology tool solutions' },
@@ -114,7 +106,6 @@ export const WHO = {
   },
 };
 
-// ---------- Impact ----------
 export const IMPACT = {
   hero: {
     eyebrow: 'Impact',
@@ -127,7 +118,6 @@ export const IMPACT = {
     eyebrow: 'The UK chapter',
     title: 'UK-Africa focus areas',
     intro: 'Six areas where we connect UK and African businesses.',
-    // CONFIRM: descriptions drafted for the new positioning.
     items: [
       { title: 'Market Entry', body: 'Routes into new markets, from first introduction to launch.' },
       { title: 'Strategic Partnerships', body: 'The right partners on both sides of the corridor.' },
@@ -144,7 +134,6 @@ export const IMPACT = {
     steps: ['Introduction', 'Market Entry', 'Partnership', 'Joint Venture', 'Expansion', 'Sustained Growth'],
   },
   partners: {
-    // Heading copy from "Network introduction.pdf"
     eyebrow: 'Who we work with',
     title: 'Partners on both sides of the corridor',
     intro: 'Investors, businesses and institutions that make cross-continent growth possible.',
@@ -165,7 +154,6 @@ export const IMPACT = {
     title: 'Trade corridors',
     intro: 'Business moves in both directions between the UK and Africa. Here is what flows each way.',
     tabs: ['UK', 'Africa'],
-    // CONFIRM: captions drafted; Industrial Trade row added at leadership's request.
     rows: [
       { label: 'Industrial Trade', toAfrica: 'UK industrial goods and services into African markets', toUK: 'African industrial output into UK supply chains' },
       { label: 'Markets', toAfrica: 'UK businesses reach African customers', toUK: 'African businesses reach UK customers' },
@@ -183,7 +171,6 @@ export const IMPACT = {
   },
 };
 
-// ---------- Markets & Partners ----------
 export const MARKETS = {
   hero: {
     eyebrow: 'Markets & Partners',
@@ -195,21 +182,35 @@ export const MARKETS = {
   team: {
     eyebrow: 'The people behind the platform',
     title: 'Meet the Global Team',
-    // CONFIRM: both bios sat in one card in the mockup. Check each is attributed to the right person.
     people: [
       {
         name: 'John Kamara',
         role: 'Co-Founder & CEO',
         photo: 'john',
-        bio: 'Growth Strategy Consultant, former CEO of Cortex Africa and Non-Executive Director of Machine Intelligence Institute of Africa. 20+ years of experience launching tech-driven solutions in new markets in Europe, South America, the Caribbean and Africa. Tech & Gaming Entrepreneur.',
+        linkedin: 'https://www.linkedin.com/in/johnkamara/',
+        bio: [
+          'Growth Strategy Consultant, former CEO of Cortex Africa and Non-Executive Director of Machine Intelligence Institute of Africa. 20+ years of experience launching tech-driven solutions in new markets in Europe, South America, the Caribbean and Africa. Tech & Gaming Entrepreneur.',
+        ],
       },
       {
         name: 'Irene Phoebe Kiwia',
         role: 'Co-Founder & CGO',
         photo: 'irene',
-        bio: 'Tech Entrepreneur using smart technology to drive exponential growth in data driven organizations. Visionary and thought leader with experience in new markets and vertical across multiple sectors.',
+        linkedin: 'https://www.linkedin.com/in/kiwiairene/',
+        bio: [
+          'Tech Entrepreneur using smart technology to drive exponential growth in data driven organizations. Visionary and thought leader with experience in new markets and verticals across multiple sectors.',
+          'Marketing Consultant with 18+ years in Media, Communication, PR and supporting pan-African companies with their go-to-market strategies. Youth & women empowerment specialist with 10+ years experience running sustainability programs to empower two segments. Media entrepreneur.',
+        ],
       },
-      { name: 'Bendon Murgor', role: 'Co-Founder & CTO', photo: 'bendon', bio: '' },
+      {
+        name: 'Bendon Murgor',
+        role: 'Co-Founder & CTO',
+        photo: 'bendon',
+        linkedin: 'https://www.linkedin.com/in/bendonmurgor/',
+        bio: [
+          'Senior software engineer with 16+ years experience architecting and building tech solutions for Pan-African clients. Certifications in CCNA, ITILv3 and GCIH, with extensive experience in Gaming, USSD Development, Mobile Money integrations, Blockchain programming, Mobile Applications and Systems Security.',
+        ],
+      },
     ],
   },
   how: {
@@ -217,7 +218,6 @@ export const MARKETS = {
     title: 'How a partnership moves',
     heading: 'Enter. Partner. Expand. Sustain.',
     intro: 'From first introduction to lasting growth between the UK and Africa.',
-    // Copy from "Editorial list.pdf"
     cards: [
       { title: 'Market Entry', body: 'Structured routes into a new market, from first introduction to launch.' },
       { title: 'Strategic Partnerships', body: 'The right local partners on both sides of the corridor.' },
@@ -231,11 +231,20 @@ export const MARKETS = {
     eyebrow: 'UK and Africa',
     title: 'Markets we connect',
     intro: 'The African markets and UK base where we connect businesses.',
-    note: 'These are connection points, not a list of offices.',
-    // CONFIRM: every country listed is a market Adanian actively works in.
+    note: 'Adanian offices across Africa and the UK.',
     groups: [
-      { name: 'Africa', places: ['Kenya', 'Nigeria', 'South Africa', 'Tanzania', 'Zambia', 'Namibia'] },
-      { name: 'UK base', places: ['United Kingdom'], accent: true },
+      {
+        name: 'Africa',
+        places: [
+          ['Kenya', 'Nairobi'],
+          ['Nigeria', 'Lagos'],
+          ['South Africa', 'Johannesburg'],
+          ['Tanzania', 'Dar es Salaam'],
+          ['Zambia', 'Lusaka'],
+          ['Namibia', 'Windhoek'],
+        ],
+      },
+      { name: 'UK base', places: [['United Kingdom', 'Salford']], accent: true },
     ],
   },
   twoWay: {

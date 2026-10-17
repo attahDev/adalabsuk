@@ -4,7 +4,6 @@ import { IMAGES } from '../content/images.js';
 export const mailto = (subject) =>
   `mailto:${SITE.contactEmail}?subject=${encodeURIComponent(subject)}`;
 
-// kind: 'africa' | 'uk' | 'partner'. variant: 'primary' | 'outline' | 'light'
 export function CtaButton({ kind, variant = 'primary', label }) {
   const cta = CTA[kind];
   return (
@@ -41,7 +40,6 @@ export function SectionHead({ eyebrow, title, intro, as: Tag = 'h2' }) {
   );
 }
 
-// Shared hero: eyebrow, wide image, headline with side note, sub-line, two CTAs.
 export function Hero({ data, image }) {
   return (
     <section className="hero">

@@ -41,8 +41,8 @@ function Corridor({ data }) {
         {data.rows.map((r) => (
           <div key={r.label} className="corridor__row">
             <h3>{r.label}</h3>
-            <p className="corridor__cell corridor__cell--uk"><span className="arrow arrow--out" aria-hidden="true" />{r.toAfrica}</p>
-            <p className="corridor__cell corridor__cell--af"><span className="arrow arrow--back" aria-hidden="true" />{r.toUK}</p>
+            <p className="corridor__cell corridor__cell--uk">{r.toAfrica}</p>
+            <p className="corridor__cell corridor__cell--af">{r.toUK}</p>
           </div>
         ))}
       </div>

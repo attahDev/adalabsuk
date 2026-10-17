@@ -1,5 +1,3 @@
-// Image slots. Every file here is a placeholder exported from the Figma mockup.
-// Replace the file in /public/images (keep the name) or change the path below.
 const img = (name) => `/images/${name}.jpg`;
 
 export const IMAGES = {
