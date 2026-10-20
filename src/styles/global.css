@@ -270,3 +270,17 @@ section[id] { scroll-margin-top: 90px; }
   .types, .pathways--flat, .form { grid-template-columns: 1fr; }
   .form__wide { grid-column: auto; }
 }
+
+.contact h1 { font-size: clamp(1.8rem, 3.2vw, 2.8rem); }
+.contact__uk { margin-top: 32px; font-style: normal; display: grid; gap: 2px; }
+.contact__label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #8fd0d9; margin-bottom: 4px; }
+.socials { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 24px; }
+.socials a { color: var(--orange); font-weight: 600; font-size: 0.9rem; text-decoration: none; }
+.socials a:hover { text-decoration: underline; }
+.offices address { font-style: normal; display: grid; gap: 2px; font-size: 0.9rem; }
+.footer__address { font-style: normal; display: grid; gap: 2px; font-size: 0.9rem; margin-bottom: 10px; }
+.socials--footer { margin-top: 12px; gap: 6px 16px; max-width: 18em; }
+.socials--footer a { font-size: 0.85rem; color: #b6cdd0; font-weight: 500; }
+.socials--footer a:hover { color: #fff; }
+.offices { margin-top: 32px; }
+.site-footer .footer__contact-link { font-size: 0.9rem; }

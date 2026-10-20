@@ -4,6 +4,7 @@ import WhoWeAre from './pages/WhoWeAre.jsx';
 import Impact from './pages/Impact.jsx';
 import MarketsPartners from './pages/MarketsPartners.jsx';
 import Partners from './pages/Partners.jsx';
+import Contact from './pages/Contact.jsx';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="impact" element={<Impact />} />
         <Route path="markets" element={<MarketsPartners />} />
         <Route path="partners" element={<Partners />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="*" element={<WhoWeAre />} />
       </Route>
     </Routes>

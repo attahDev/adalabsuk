@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { NAV, AFRICA_LINKS, SITE } from '../content/site.js';
+import { NAV, AFRICA_LINKS, OFFICES, SITE } from '../content/site.js';
 import { CtaButton } from './ui.jsx';
 
 function ScrollManager() {
@@ -58,6 +58,21 @@ function Footer() {
         <div>
           <img src="/logo.png" alt="Adanian Labs" width="150" height="44" />
           <p className="footer__tagline">{SITE.tagline}</p>
+        </div>
+        <div>
+          <p className="footer__heading">Contact</p>
+          <address className="footer__address">
+            <span>{OFFICES[0].lines.join(', ')}</span>
+            <span>{OFFICES[0].city}, {OFFICES[0].country}</span>
+          </address>
+          <p><Link className="footer__contact-link" to="/contact">Contact us</Link></p>
+          <ul className="socials socials--footer" aria-label="Adanian Labs on social media">
+            {SITE.socials.map((s) => (
+              <li key={s.label}>
+                <a href={s.href} target="_blank" rel="noreferrer">{s.label}</a>
+              </li>
+            ))}
+          </ul>
         </div>
         <nav aria-label="Adanian Labs Africa">
           <p className="footer__heading">Adanian Labs Africa</p>

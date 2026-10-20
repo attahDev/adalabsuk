@@ -4,13 +4,32 @@ export const SITE = {
   contactEmail: 'hello@adanianlabs.co.uk',
   tagline: 'Market Access. Partnerships. Expansion. Impact.',
   baseLine: 'Adanian Labs UK · Gateway between the UK and Africa',
+  socials: [
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/adanianlabs/' },
+    { label: 'X', href: 'https://twitter.com/Adanianlabs' },
+    { label: 'Instagram', href: 'https://www.instagram.com/adanianlabs/' },
+    { label: 'Facebook', href: 'https://www.facebook.com/adanianlabsafrica' },
+    { label: 'YouTube', href: 'https://www.youtube.com/channel/UCOeKw9V96Ijfxq72ifimQmg' },
+    { label: 'Telegram', href: 'https://t.me/+xrJH8w4Xxw04MTc8' },
+  ],
 };
+
+export const OFFICES = [
+  { city: 'England', country: 'United Kingdom', lines: ['1 The Quays, Salford', 'M50 3UB'], uk: true },
+  { city: 'Nairobi', country: 'Kenya', lines: ['Mkungu Close', 'Westlands'] },
+  { city: 'Lagos', country: 'Nigeria', lines: ['3 Otunba Adedoyin Ogungbe Crescent', 'Lekki Phase 1'] },
+  { city: 'Dar es Salaam', country: 'Tanzania', lines: ['InfoTech Place, Mwai Kibaki Road', 'Kawe'] },
+  { city: 'Lusaka', country: 'Zambia', lines: ['Suite 223, Arcades', 'Great East Road'] },
+  { city: 'Johannesburg', country: 'South Africa', lines: ['41, 2nd Road, Hyde Park', 'Sandton, 2196'] },
+  { city: 'Windhoek', country: 'Namibia', lines: ['Freedom Amupolo', '71 Dr Theo Ben Gurirab Street', 'Luxury Hill, Klein Windhoek'] },
+];
 
 export const NAV = [
   { label: 'Who We Are', to: '/' },
   { label: 'Impact', to: '/impact' },
   { label: 'Markets & Partners', to: '/markets' },
   { label: 'Partners', to: '/partners' },
+  { label: 'Contact', to: '/contact' },
 ];
 
 export const AFRICA_LINKS = [
@@ -371,5 +390,17 @@ export const PARTNERS = {
     title: 'Start a partnership conversation',
     intro: 'Tell us who you are and which direction you want to grow. We will come back to you with the right introductions.',
     interests: ['Expand into Africa', 'Expand into the UK', 'Become an industry partner', 'Something else'],
+  },
+};
+
+export const CONTACT = {
+  eyebrow: 'Contact',
+  title: 'Talk to the Adanian team',
+  intro: 'Tell us which direction you want to grow and we will come back with the right introductions.',
+  interests: ['Expand into Africa', 'Expand into the UK', 'Become a partner', 'Media or general enquiry'],
+  offices: {
+    eyebrow: 'Our offices',
+    title: 'Seven offices across Africa and the UK',
+    intro: 'Our UK office is in Salford, with six offices across Africa.',
   },
 };
