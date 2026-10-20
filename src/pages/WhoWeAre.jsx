@@ -97,6 +97,7 @@ export default function WhoWeAre() {
           <ul className="link-list">
             <li><Link to="/markets">Markets & Partners</Link></li>
             <li><Link to="/impact">Impact</Link></li>
+            <li><Link to="/partners">Partners</Link></li>
             <li><Link to="/markets#team">Global Team</Link></li>
           </ul>
         </div>

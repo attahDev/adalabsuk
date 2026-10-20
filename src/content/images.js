@@ -19,6 +19,8 @@ export const IMAGES = {
   partners: { src: img('partners'), alt: 'Partners around a meeting table' },
   corridor: { src: img('corridor'), alt: 'UK and African colleagues meeting' },
 
+  partnersHero: { src: img('corridor'), alt: 'UK and African colleagues in a partnership meeting' },
+
   marketsHero: { src: img('markets-hero'), alt: 'Team meeting in a glass-walled office' },
   john: { src: img('team-john'), alt: 'John Kamara' },
   irene: { src: img('team-irene'), alt: 'Irene Phoebe Kiwia' },

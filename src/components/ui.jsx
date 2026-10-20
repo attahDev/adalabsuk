@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { CTA, SITE } from '../content/site.js';
 import { IMAGES } from '../content/images.js';
 
@@ -6,6 +7,13 @@ export const mailto = (subject) =>
 
 export function CtaButton({ kind, variant = 'primary', label }) {
   const cta = CTA[kind];
+  if (cta.to) {
+    return (
+      <Link className={`btn btn--${variant}`} to={cta.to}>
+        {label || cta.label}
+      </Link>
+    );
+  }
   return (
     <a className={`btn btn--${variant}`} href={mailto(cta.subject)}>
       {label || cta.label}
@@ -40,7 +48,7 @@ export function SectionHead({ eyebrow, title, intro, as: Tag = 'h2' }) {
   );
 }
 
-export function Hero({ data, image }) {
+export function Hero({ data, image, children }) {
   return (
     <section className="hero">
       <div className="container">
@@ -57,8 +65,12 @@ export function Hero({ data, image }) {
           </aside>
         </div>
         <div className="hero__ctas">
-          <CtaButton kind="africa" />
-          <CtaButton kind="uk" variant="outline" />
+          {children || (
+            <>
+              <CtaButton kind="africa" />
+              <CtaButton kind="uk" variant="outline" />
+            </>
+          )}
         </div>
       </div>
     </section>

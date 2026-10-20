@@ -10,6 +10,7 @@ export const NAV = [
   { label: 'Who We Are', to: '/' },
   { label: 'Impact', to: '/impact' },
   { label: 'Markets & Partners', to: '/markets' },
+  { label: 'Partners', to: '/partners' },
 ];
 
 export const AFRICA_LINKS = [
@@ -23,7 +24,7 @@ export const AFRICA_LINKS = [
 export const CTA = {
   africa: { label: 'Expand into Africa', subject: 'Expand into Africa' },
   uk: { label: 'Expand into the UK', subject: 'Expand into the UK' },
-  partner: { label: 'Partner with us', subject: 'Partnership enquiry' },
+  partner: { label: 'Partner with us', subject: 'Partnership enquiry', to: '/partners#enquire' },
 };
 
 export const WHO = {
@@ -294,5 +295,81 @@ export const MARKETS = {
     eyebrow: 'Start a conversation',
     title: 'Start the conversation',
     body: 'Bring a question, a challenge or an idea. Tell us which direction you are expanding in and we will connect you with the right partners.',
+  },
+};
+
+const LOGO_BASE = 'https://www.adanianlabs.io/images/industry-partners/';
+
+export const PARTNERS = {
+  hero: {
+    eyebrow: 'Partners',
+    title: 'Partners who make the corridor work.',
+    sub: 'We work with industry leaders, institutions and governments on both sides of the UK-Africa corridor to turn expansion plans into lasting partnerships.',
+    tag: 'UK · Africa',
+    note: 'Local and international partners, from first introduction to joint venture.',
+  },
+  types: {
+    eyebrow: 'Who we partner with',
+    title: 'Five kinds of partner, one shared corridor',
+    intro: 'We partner with local and international institutions, governments and industry leaders.',
+    items: [
+      { title: 'Industry leaders', body: 'Commercial partners who open routes into new markets and supply chains.' },
+      { title: 'Technology companies', body: 'The platforms, cloud and AI providers behind every engagement.' },
+      { title: 'Development partners', body: 'Institutions that fund and enable cross-border growth.' },
+      { title: 'Government institutions', body: 'Trade agencies and public bodies that support regulation, policy and delegations.' },
+      { title: 'Learning institutions', body: 'Universities and training partners that build cross-border expertise.' },
+    ],
+  },
+  logos: {
+    eyebrow: 'Our industry partners',
+    title: 'Working with industry leaders',
+    intro: 'A selection of the companies we partner with across technology, telecoms, banking and AI.',
+    items: [
+      { name: 'Airtel', file: 'airtel.png' },
+      { name: 'AIM Global', file: 'aim-global-vertical.png' },
+      { name: 'GTBank', file: 'gtbank.png' },
+      { name: 'MTN', file: 'MTN.png' },
+      { name: 'Huawei', file: 'Huawei.png' },
+      { name: 'Safaricom', file: 'Safaricom.png' },
+      { name: 'Zoho', file: 'zoho.png' },
+      { name: 'Access', file: 'Access.png' },
+      { name: 'Cardano', file: 'Carddano.png' },
+      { name: 'Nvidia', file: 'Nvidia.png' },
+      { name: 'AICE', file: 'aice-logo.png' },
+      { name: 'Microsoft', file: 'microsoft.png' },
+      { name: 'LBank', file: 'lbank.png' },
+      { name: 'Standard', file: 'Starndard.png' },
+      { name: 'ABC', file: 'abc-logo.png' },
+      { name: 'PLP', file: 'plp.png' },
+      { name: 'AI', file: 'AI.png' },
+    ].map((l) => ({ name: l.name, src: LOGO_BASE + l.file })),
+  },
+  why: {
+    eyebrow: 'Why partner with us',
+    title: 'Reach both sides of the corridor',
+    cards: [
+      {
+        dir: 'UK partners → Africa',
+        title: 'Reach African markets',
+        body: 'Offices in six African countries and a network of local partners give UK partners a direct route in.',
+      },
+      {
+        dir: 'African partners → UK',
+        title: 'Reach the UK',
+        body: 'Our UK base in Salford connects African partners to UK capital, investors, partners and regulation.',
+      },
+    ],
+    stats: [
+      { value: '7', label: 'offices across Africa and the UK' },
+      { value: '40+', label: 'startups incubated' },
+      { value: '5', label: 'labs across Africa' },
+      { value: '100+', label: 'technology tool solutions' },
+    ],
+  },
+  enquire: {
+    eyebrow: 'Become a partner',
+    title: 'Start a partnership conversation',
+    intro: 'Tell us who you are and which direction you want to grow. We will come back to you with the right introductions.',
+    interests: ['Expand into Africa', 'Expand into the UK', 'Become an industry partner', 'Something else'],
   },
 };
