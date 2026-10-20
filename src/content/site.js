@@ -32,13 +32,7 @@ export const NAV = [
   { label: 'Contact', to: '/contact' },
 ];
 
-export const AFRICA_LINKS = [
-  { label: 'Adanian Labs Africa', href: '#' },
-  { label: 'Technology Tools', href: '#' },
-  { label: 'Venture Building', href: '#' },
-  { label: 'Capacity Building', href: '#' },
-  { label: 'Global Team', href: '/markets#team' },
-];
+export const AFRICA_SITE = { label: 'Adanian Labs Africa', href: 'https://www.adanianlabs.io/' };
 
 export const CTA = {
   africa: { label: 'Expand into Africa', subject: 'Expand into Africa' },

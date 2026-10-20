@@ -1,5 +1,6 @@
 import { CONTACT, OFFICES, SITE } from '../content/site.js';
 import { SectionHead } from '../components/ui.jsx';
+import SocialIcon from '../components/SocialIcon.jsx';
 import EnquiryForm from '../components/EnquiryForm.jsx';
 
 export default function Contact() {
@@ -18,7 +19,9 @@ export default function Contact() {
             <ul className="socials" aria-label="Adanian Labs on social media">
               {SITE.socials.map((s) => (
                 <li key={s.label}>
-                  <a href={s.href} target="_blank" rel="noreferrer">{s.label}</a>
+                  <a href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}>
+                    <SocialIcon label={s.label} />
+                  </a>
                 </li>
               ))}
             </ul>

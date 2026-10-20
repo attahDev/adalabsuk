@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { NAV, AFRICA_LINKS, OFFICES, SITE } from '../content/site.js';
+import { NAV, AFRICA_SITE, OFFICES, SITE } from '../content/site.js';
+import SocialIcon from './SocialIcon.jsx';
 import { CtaButton } from './ui.jsx';
 
 function ScrollManager() {
@@ -52,6 +53,7 @@ function Header() {
 }
 
 function Footer() {
+  const uk = OFFICES[0];
   return (
     <footer className="site-footer">
       <div className="container footer__grid">
@@ -62,28 +64,23 @@ function Footer() {
         <div>
           <p className="footer__heading">Contact</p>
           <address className="footer__address">
-            <span>{OFFICES[0].lines.join(', ')}</span>
-            <span>{OFFICES[0].city}, {OFFICES[0].country}</span>
+            <span>{uk.lines.join(', ')}</span>
+            <span>{uk.city}, {uk.country}</span>
           </address>
-          <p><Link className="footer__contact-link" to="/contact">Contact us</Link></p>
-          <ul className="socials socials--footer" aria-label="Adanian Labs on social media">
+          <ul className="socials" aria-label="Adanian Labs on social media">
             {SITE.socials.map((s) => (
               <li key={s.label}>
-                <a href={s.href} target="_blank" rel="noreferrer">{s.label}</a>
+                <a href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}>
+                  <SocialIcon label={s.label} />
+                </a>
               </li>
             ))}
           </ul>
         </div>
-        <nav aria-label="Adanian Labs Africa">
+        <div>
           <p className="footer__heading">Adanian Labs Africa</p>
-          <ul>
-            {AFRICA_LINKS.map((l) => (
-              <li key={l.label}>
-                {l.href.startsWith('/') ? <Link to={l.href}>{l.label}</Link> : <a href={l.href}>{l.label}</a>}
-              </li>
-            ))}
-          </ul>
-        </nav>
+          <a href={AFRICA_SITE.href} target="_blank" rel="noreferrer">Visit {AFRICA_SITE.label}</a>
+        </div>
       </div>
       <div className="container footer__base">{SITE.baseLine}</div>
     </footer>
